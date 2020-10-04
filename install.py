@@ -203,16 +203,16 @@ def install_bench(args):
 	if args.production:
 		extra_vars.update(max_worker_connections=multiprocessing.cpu_count() * 1024)
 
-	frappe_branch = 'version-12'
-	erpnext_branch = 'version-12'
+	frappe_branch = 'v12'
+	erpnext_branch = 'v12'
 
 	if args.version:
 		if args.version <= 10:
 			frappe_branch = "{0}.x.x".format(args.version)
 			erpnext_branch = "{0}.x.x".format(args.version)
 		else:
-			frappe_branch = "version-{0}".format(args.version)
-			erpnext_branch = "version-{0}".format(args.version)
+			frappe_branch = "v{0}".format(args.version)
+			erpnext_branch = "v{0}".format(args.version)
 	else:
 		if args.frappe_branch:
 			frappe_branch = args.frappe_branch
