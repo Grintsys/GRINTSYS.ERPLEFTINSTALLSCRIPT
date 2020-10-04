@@ -115,7 +115,7 @@ def install_prerequisites():
 	run_os_command({
 		'apt-get': [
 			'sudo apt-get update',
-			'sudo apt-get install -y git build-essential python3-setuptools python3-dev libffi-dev'
+			'sudo DEBIAN_FRONTEND=noninteractive apt install -y curl build-essential mariadb-client python3-setuptools python3-dev libffi-dev python3-pip libcurl4 dnsmasq fontconfig git htop libcrypto++-dev libfreetype6-dev liblcms2-dev libwebp-dev libxext6 libxrender1 libxslt1-dev libxslt1.1 libffi-dev ntpdate postfix python3-dev python-tk screen vim xfonts-75dpi xfonts-base zlib1g-dev apt-transport-https libsasl2-dev libldap2-dev libcups2-dev pv libjpeg8-dev libtiff5-dev tcl8.6-dev tk8.6-dev libssl1.0-dev python3-mysqldb libdate-manip-perl logwatch'
 		],
 		'yum': [
 			'sudo yum groupinstall -y "Development tools"',
