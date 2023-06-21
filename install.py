@@ -56,7 +56,7 @@ def check_system_package_managers():
 			Please install brew package manager before proceeding with bench setup. Please run following
 			to install brew package manager on your machine,
 
-			/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+			/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 			''')
 	if 'Linux' in os.uname():
 		if not any([shutil.which(x) for x in ['apt-get', 'yum']]):
